@@ -5,7 +5,7 @@ class K3sup < Formula
   sha256 "0177e08d4104bf01182fe347492e70274f53dd19b1161acc7e043b649a4e0e7d"
 
   def install
-      bin.install  "k3sup"
+      bin.install "k3sup"
   end
 
 end
