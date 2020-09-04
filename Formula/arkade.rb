@@ -1,4 +1,4 @@
-class arkade < Formula
+class Arkade < Formula
   desc "Install Kubernetes CLIs and Apps"
   homepage "http://get-arkade.dev"
   url "https://github.com/alexellis/arkade/releases/download/0.6.10/arkade-darwin"

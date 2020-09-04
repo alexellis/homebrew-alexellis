@@ -1,4 +1,4 @@
-class k3sup < Formula
+class K3sup < Formula
   desc "Install k3s over SSH"
   homepage "http://k3sup.dev"
   url "https://github.com/alexellis/k3sup/releases/download/0.9.6/k3sup-darwin"
