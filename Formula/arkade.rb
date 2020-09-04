@@ -7,6 +7,6 @@ class Arkade < Formula
   bottle :unneeded
 
   def install
-      bin.install "arkade"
+      bin.install "arkade-darwin" => "arkade"
   end
 end
