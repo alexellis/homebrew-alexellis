@@ -1,10 +1,9 @@
 class K3sup < Formula
   desc "Install k3s over SSH with ('ketchup')"
   homepage "http://k3sup.dev"
-  url "https://github.com/alexellis/k3sup/releases/download/0.9.6/k3sup-darwin"
-  sha256 "0177e08d4104bf01182fe347492e70274f53dd19b1161acc7e043b649a4e0e7d"
-
-  version "0.9.6"
+  url "https://github.com/alexellis/k3sup/releases/download/0.9.12/k3sup-darwin"
+  sha256 "510dedce077ba33a564ce0890aee63f9206937898c29a67a36892c2b31c6b7c0"
+  version "0.9.12"
   bottle :unneeded
 
   def install
