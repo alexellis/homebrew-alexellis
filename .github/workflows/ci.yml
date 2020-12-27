@@ -1,0 +1,34 @@
+name: "Update homebrew formula under alexellis name with latest release"
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "*"
+      - "!README.md"
+  schedule:
+    # Run workflow once a day to grab latest release
+    - cron: "0 0 * * *"
+
+jobs:
+  brew:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Set up Ruby 2.6
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.x
+      - name: Render latest template
+        run: |
+          ruby ./template-gen/render.rb k3sup | tee Formula/k3sup.rb
+          ruby ./template-gen/render.rb arkade | tee Formula/arkade.rb
+          
+      - name: Commit changes
+        run: |
+              IFS="/" read USERNAME REPONAME <<<$GITHUB_REPOSITORY
+              git add ./Formula/k3sup.rb ./Formula/arkade.rb
+              git config --global user.name "$USERNAME"
+              git config --global user.email "$USERNAME@users.noreply.github.com"
+              git diff-index --quiet HEAD || git commit -m "syncup with latest version"
+              git push
