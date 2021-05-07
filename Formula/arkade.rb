@@ -1,12 +1,11 @@
 class Arkade < Formula
-  desc "Install Kubernetes CLIs and Apps"
-  homepage "http://get-arkade.dev"
-  url "https://github.com/alexellis/arkade/releases/download/0.6.13/arkade-darwin"
-  sha256 "92ddad06507a9899ddc0b499a0bb80f4e2dccc290cb82cdd1918329b42150148"
-  version "0.6.13"
-  bottle :unneeded
-
-  def install
-      bin.install "arkade-darwin" => "arkade"
-  end
+    desc "Open Source Kubernetes Marketplace"
+    url "https://github.com/alexellis/arkade/releases/download/0.7.13/arkade-darwin"
+    sha256 "82b116ed93e19bd96f295214c64b86576e296dd67fc12917a91a282a8a392f0f"
+    version "0.7.13"
+    bottle :unneeded
+    
+    def install
+        bin.install "arkade-darwin" => "arkade"
+    end
 end
