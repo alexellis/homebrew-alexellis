@@ -3,9 +3,9 @@ on:
   push:
     branches:
       - master
-    paths:
-      - "*"
-      - "!README.md"
+    paths-ignore:
+     - "/README.md"
+     - "/Formula"
   schedule:
     # Run workflow once a day to grab latest release
     - cron: "0 0 * * *"
