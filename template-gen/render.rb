@@ -55,3 +55,4 @@ $project = ARGV[0]
 template = File.read(File.join(File.dirname(__FILE__),'/template.erb'))
 renderer = ERB.new(template)
 print renderer.result()
+
