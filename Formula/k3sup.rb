@@ -1,8 +1,8 @@
 class K3sup < Formula
     desc "bootstrap Kubernetes with k3s over SSH < 1 min 🚀"
-    url "https://github.com/alexellis/k3sup/releases/download/0.11.0/k3sup-darwin"
-    sha256 "97cb4940b493600b3aa9678974b5ab33d6d8d7195eb4ecab0ed55313728b69ba"
-    version "0.11.0"
+    url "https://github.com/alexellis/k3sup/releases/download/0.11.1/k3sup-darwin"
+    sha256 "6be251110b1bb6150e394652b313a2ddf7c9ce33c48d355869d6ce10757eb184"
+    version "0.11.1"
     bottle :unneeded
     
     def install
