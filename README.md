@@ -16,7 +16,7 @@ Install the following apps via this Homebrew tap:
 
 * [arkade](http://github.com/alexellis/arkade)
 * [k3sup](http://github.com/alexellis/k3sup)
-* [run-job]](http://github.com/alexellis/run-job)
+* [run-job](http://github.com/alexellis/run-job)
 
 ```bash
 brew tap alexellis/homebrew-alexellis
