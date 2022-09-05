@@ -23,11 +23,12 @@ jobs:
         run: |
           ruby ./template-gen/render.rb k3sup | tee Formula/k3sup.rb
           ruby ./template-gen/render.rb arkade | tee Formula/arkade.rb
-          
+          ruby ./template-gen/render.rb run-job | tee Formula/run-job.rb
+
       - name: Commit changes
         run: |
               IFS="/" read USERNAME REPONAME <<<$GITHUB_REPOSITORY
-              git add ./Formula/k3sup.rb ./Formula/arkade.rb
+              git add ./Formula/k3sup.rb ./Formula/arkade.rb ./Formula/run-job.rb
               git config --global user.name "$USERNAME"
               git config --global user.email "$USERNAME@users.noreply.github.com"
               git diff-index --quiet HEAD || git commit -m "syncup with latest version"
