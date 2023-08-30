@@ -1,8 +1,8 @@
 class K3sup < Formula
     desc "bootstrap K3s over SSH in < 60s 🚀"
-    url "https://github.com/alexellis/k3sup/releases/download/0.12.15/k3sup-darwin"
-    sha256 "dab0206ca31fbf78d45727f88abf6c1af4e4d55cb3916f310be67d5eb717ce8f"
-    version "0.12.15"
+    url "https://github.com/alexellis/k3sup/releases/download/0.13.0/k3sup-darwin"
+    sha256 "ace8f110a532bcca6fe1a099e7cd99b7952c981bc0f6cd73d1a3bb775e4aba47"
+    version "0.13.0"
     
     def install
         bin.install "k3sup-darwin" => "k3sup"
