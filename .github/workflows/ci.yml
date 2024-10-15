@@ -30,11 +30,11 @@ jobs:
       - name: Commit changes
         run: |
               IFS="/" read USERNAME REPONAME <<<$GITHUB_REPOSITORY
-              git add ./Formula/k3sup.rb ./Formula/arkade.rb ./Formula/run-job.rb
+              git add ./Formula/k3sup.rb ./Formula/arkade.rb ./Formula/run-job.rb ./Formula/kubetrim.rb
               git config --global user.name "$USERNAME"
               git config --global user.email "$USERNAME@users.noreply.github.com"
               git diff-index --quiet HEAD || git commit -m "syncup with latest version"
-              git push
+              git push || echo "No changes to commit"
 
   test-brew:
     runs-on: ubuntu-latest
