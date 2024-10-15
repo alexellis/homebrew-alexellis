@@ -24,7 +24,7 @@ jobs:
           ruby ./template-gen/render.rb k3sup | tee Formula/k3sup.rb
           ruby ./template-gen/render.rb arkade | tee Formula/arkade.rb
           ruby ./template-gen/render.rb run-job | tee Formula/run-job.rb
-          ruby ./template-gen/render.rb run-job | tee Formula/kubetrim.rb
+          ruby ./template-gen/render.rb kubetrim | tee Formula/kubetrim.rb
 
 
       - name: Commit changes
