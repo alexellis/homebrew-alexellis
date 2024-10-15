@@ -15,15 +15,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Set up Ruby 3.1
-        uses: actions/setup-ruby@master
+      - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1.x
+          ruby-version: '3.3' # Not needed with a `.ruby-version` or `.tool-versions`
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
       - name: Render latest template
         run: |
           ruby ./template-gen/render.rb k3sup | tee Formula/k3sup.rb
           ruby ./template-gen/render.rb arkade | tee Formula/arkade.rb
           ruby ./template-gen/render.rb run-job | tee Formula/run-job.rb
+          ruby ./template-gen/render.rb run-job | tee Formula/kubetrim.rb
+
 
       - name: Commit changes
         run: |
