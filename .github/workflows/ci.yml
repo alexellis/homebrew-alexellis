@@ -36,28 +36,29 @@ jobs:
               git diff-index --quiet HEAD || git commit -m "syncup with latest version"
               git push || echo "No changes to commit"
 
-  test-brew:
-    runs-on: ubuntu-latest
-    needs: [brew]
-    steps:
-      - uses: actions/checkout@master
-      - name: Add tap
-        run: |
-          brew tap alexellis/homebrew-alexellis
-      - name: Test brew formula
-        run: |
-          brew install ./Formula/k3sup.rb
-          brew install ./Formula/arkade.rb
-          brew install ./Formula/run-job.rb
-          brew install ./Formula/kubetrim.rb
-          brew test ./Formula/k3sup.rb
-          brew test ./Formula/arkade.rb
-          brew test ./Formula/run-job.rb
-          brew test ./Formula/kubetrim.rb
+  # Needs a MacOS runner
+  # test-brew:
+  #   runs-on: ubuntu-latest
+  #   needs: [brew]
+  #   steps:
+  #     - uses: actions/checkout@master
+  #     - name: Add tap
+  #       run: |
+  #         brew tap alexellis/homebrew-alexellis
+  #     - name: Test brew formula
+  #       run: |
+  #         brew install ./Formula/k3sup.rb
+  #         brew install ./Formula/arkade.rb
+  #         brew install ./Formula/run-job.rb
+  #         brew install ./Formula/kubetrim.rb
+  #         brew test ./Formula/k3sup.rb
+  #         brew test ./Formula/arkade.rb
+  #         brew test ./Formula/run-job.rb
+  #         brew test ./Formula/kubetrim.rb
 
-          which k3sup
-          which arkade
-          which run-job
-          which kubetrim
+  #         which k3sup
+  #         which arkade
+  #         which run-job
+  #         which kubetrim
 
 
