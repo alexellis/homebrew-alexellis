@@ -1,8 +1,8 @@
 class Arkade < Formula
     desc "Open Source Marketplace For Developer Tools"
-    url "https://github.com/alexellis/arkade/releases/download/0.11.60/arkade-darwin"
-    sha256 "472a8e2ecff3b72c0d0b9ee363b7b679280064f074bd7ed5b0227819a1475460"
-    version "0.11.60"
+    url "https://github.com/alexellis/arkade/releases/download/0.11.62/arkade-darwin"
+    sha256 "5cc01ca6123a65dfcfd0d6cb33c8af1c4faf675fa11845295f9fdfd45c611623"
+    version "0.11.62"
     
     def install
         bin.install "arkade-darwin" => "arkade"
